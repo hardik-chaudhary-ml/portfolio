@@ -13,6 +13,14 @@
 
 <body>
 
+<!-- LOADER -->
+<div id="loader">
+  <div class="loader-text">Loading Portfolio...</div>
+</div>
+
+<!-- CURSOR GLOW -->
+<div class="cursor-glow"></div>
+
 <!-- NAVBAR -->
 <nav class="navbar">
   <h2>Hardik</h2>
@@ -54,7 +62,7 @@
 
   <p>
     I am a results-driven Data Analyst with a strong foundation in Python, SQL, and Machine Learning.
-    I specialize in transforming raw data into meaningful insights that support data-driven decision making.
+    I specialize in transforming raw data into meaningful insights for data-driven decision making.
   </p>
 
   <p>
@@ -64,11 +72,6 @@
 
   <p>
     Improved prediction accuracy up to 82% using Random Forest and hyperparameter tuning.
-  </p>
-
-  <p>
-    I am continuously improving my analytical and problem-solving skills and actively exploring new tools
-    in Data Science and Analytics.
   </p>
 
   <p><strong>Currently seeking Data Analyst / Data Science opportunities.</strong></p>
@@ -97,9 +100,9 @@
 
 <!-- STATS -->
 <section class="stats">
-  <div>3+ <br> Projects</div>
-  <div>10k+ <br> Data Records</div>
-  <div>1 <br> Live ML App</div>
+  <div class="stat-card">3+ <br> Projects</div>
+  <div class="stat-card">10k+ <br> Data Records</div>
+  <div class="stat-card">1 <br> Live ML App</div>
 </section>
 
 <!-- PROJECTS -->
@@ -108,17 +111,10 @@
 
   <div class="project-container">
 
-    <!-- FEATURED -->
     <div class="card featured">
       <h3>Medical Cost Prediction</h3>
-      <p>
-        Built ML model using Random Forest achieving ~74% accuracy and deployed using Streamlit.
-      </p>
-
-      <p>
-        Reduced manual analysis effort by ~30% using automated ML predictions.
-      </p>
-
+      <p>ML model (~74% accuracy) deployed with Streamlit.</p>
+      <p>Reduced manual analysis effort by ~30%.</p>
       <p class="tech">Python • Pandas • Scikit-learn • Streamlit</p>
 
       <div class="project-buttons">
@@ -129,11 +125,8 @@
 
     <div class="card">
       <h3>Supply Chain Analysis</h3>
-      <p>
-        Analyzed 10k+ records to identify delays and improve logistics efficiency.
-      </p>
-
-      <p class="tech">Python • Pandas • Data Analysis</p>
+      <p>Analyzed 10k+ records to improve logistics efficiency.</p>
+      <p class="tech">Python • Pandas • Analysis</p>
 
       <div class="project-buttons">
         <a href="https://github.com/hardik-chaudhary-ml" target="_blank">View Project</a>
@@ -142,10 +135,7 @@
 
     <div class="card">
       <h3>Inventory & Invoice Analysis</h3>
-      <p>
-        Built classification model achieving 89% accuracy to detect anomalies and fraud patterns.
-      </p>
-
+      <p>89% accuracy fraud detection model.</p>
       <p class="tech">Python • ML • Classification</p>
 
       <div class="project-buttons">
@@ -161,7 +151,6 @@
   <h2>Contact</h2>
 
   <p class="email">hardik10chaudhary@gmail.com</p>
-
   <p>Open to internships & entry-level roles</p>
   <p>Available for immediate joining</p>
 
@@ -178,6 +167,20 @@
 <footer>
   <p>© 2026 Hardik Chaudhary</p>
 </footer>
+
+<!-- JS -->
+<script>
+const glow = document.querySelector(".cursor-glow");
+
+document.addEventListener("mousemove", e => {
+  glow.style.left = e.clientX + "px";
+  glow.style.top = e.clientY + "px";
+});
+
+window.addEventListener("load", () => {
+  document.getElementById("loader").style.display = "none";
+});
+</script>
 
 </body>
 </html>
